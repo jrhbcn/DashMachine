@@ -2,7 +2,7 @@ FROM python:3.8-slim
 
 RUN apt-get update -q \
   && apt-get install --no-install-recommends -qy \
-    inetutils-ping gcc libc-dev libffi-dev \
+    inetutils-ping gcc libc-dev libffi-dev zlib \
   && rm -rf /var/lib/apt/lists/*
 
 COPY [ "requirements.txt", "/dashmachine/" ]
